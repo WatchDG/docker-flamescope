@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  flamescope:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    volumes:
+      - ./examples:/profiles:ro
+    ports:
+      - "5000:5000"
